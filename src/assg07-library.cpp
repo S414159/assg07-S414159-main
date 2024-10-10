@@ -46,6 +46,21 @@ using namespace std;
  *    the reset flag parameter to reset and begin generating from the start
  *    of the sequence again.
  */
+int nextFibonacciNumber(bool resetSequence = false)
+{
+  static int F_2 = 0;
+  static int F_1 = 1;
+  
+  if (resetSequence) {
+    F_2 = 0;
+    F_1 = 1;
+    return 1;
+  }
+  int nextNumber = F_2 + F_1;
+  F_2 = F_1;
+  F_1 = nextNumber;
+  return nextNumber;
+}
 
 /** @brief swap two given integer values in memory
  *

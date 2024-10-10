@@ -18,5 +18,4 @@ using namespace std;
 // given to you to as example solutions from previous assignment
 void swap(int& a, int& b);
 void threeSort(int& a, int& b, int& c);
-int nextFibnacciNumber(bool rest = false);
-
+int nextFibonacciNumber(bool resetSequence = false);
